@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="src/bootstrap-5.3.3-dist/css/bootstrap.css">
+    <script src="src/bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", system-ui;
+        }
+    header,aside,main,footer,.section-1,.section-2,.section-3{
+      
+        margin-top: 15px;
+    }
+     
+     @media screen and (orientation:landscape)
+     {
+        body
+        {
+            display: grid;
+            grid-template-columns: 2fr 8fr 2fr;
+          
+        }
+        header
+        {
+            grid-row: 1;
+            grid-column: 1/4;
+            display: grid;
+            grid-template-columns: 3fr 6fr 3fr;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+            margin: 10px;
+        }
+        .nav-brand
+        {
+            grid-row: 1;
+            grid-column: 1;
+            font-size: 28px;
+           
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        .navbars{
+            grid-row: 1;
+            grid-column: 2;
+            display: flex;
+            justify-content: space-evenly;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .navbars span
+        {
+            
+        }
+        .social{
+            grid-row: 1;
+            grid-column: 3;
+            display: flex;
+            justify-content: center;
+          
+           
+        }
+         .social span {
+             margin-left: 5px;
+             margin-right: 5px;
+         }
+        .cartbox
+        {
+            position: relative;
+        }
+        .badges
+        {
+            background-color: red;
+           
+            border-radius: 50%;
+            padding: 1px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+            position: absolute;
+            top: -13px;
+            right: -13px;
+        }
+        aside
+        {
+            grid-row: 2;
+            grid-column: 1/4;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .bi-lightning-fill
+        {
+            color: gold;
+        }
+        main
+        {
+            height: 450px;
+            grid-row:3;
+            grid-column:1/4;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+        }
+       .women-fashion,.men-fashion,.kid-fashion
+       {
+       
+        background-position: center;
+        background-size: cover;
+        height: 100%;
+        display: grid;
+        grid-template-rows: 6fr 6fr;
+        
+        
+       }
+       .women-fashion{
+           grid-row: 1;
+           grid-column: 1;
+           background-image: url(images/women-fashion-2.avif);
+       }
+       .women-fashion div,.men-fashion div,.kid-fashion div 
+       {
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+       }
+    .bi-chevron-right
+    {
+        font-size: 12px;
+       
+    }
+       .men-fashion{
+           grid-row: 1;
+           grid-column: 2;
+           background-image: url(images/men3.jpg);
+       }
+       .kid-fashion{
+           grid-row: 1;
+           grid-column: 3;
+           background-image: url(images/kid3.jpg);
+       }
+       .section-1
+       {
+       
+        grid-row:4;
+       grid-column: 1/4;
+          height: 100px;
+          display: grid;
+          grid-template-columns: 3fr 3fr 3fr 3fr;  
+          padding: 20px;
+       }
+      .section-1-box
+      {
+        display: grid;
+        grid-template-columns: 2fr 10fr;
+      }
+       .section-1-icon
+       {
+        grid-row: 1;
+        grid-column: 1;
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       }
+       .section-1-info
+       {
+         grid-row: 1;
+         grid-column: 2;
+         
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+        
+        
+        
+       }
+       .section-2{
+        grid-row: 5;
+        grid-column: 1/4;
+        height: 200px;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+       }
+       .section-2-title
+       {
+        font-size: 38px;
+       }
+       .section-3{
+        grid-row:6;
+            grid-column: 1/4;
+            height: 400px;
+           display: flex;
+           justify-content: space-evenly;
+          
+           
+           
+       }
+       .section-4{
+        margin-top: 40px;
+        grid-row:7;
+            grid-column: 1/4;
+            height: 400px;
+           display: flex;
+           justify-content: space-evenly;
+          
+           
+           
+       }
+       .girl-bag,.sweatshirts
+       {
+      
+        height: 100%;
+        width: 30%;
+        background-image: url(images/girl-bag.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+        border-radius: 20px;
+      
+       }
+       .sweatshirts
+       {
+        background-image: url(images/sweatshirts.jpg);
+       }
+       .printed-shirt,.basic-women
+       {
+      
+      
+        height: 100%;
+        width: 50%;
+        background-image: url(images/printed-shirt.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        color: black;
+         position: relative;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+         0 6px 20px rgba(0, 0, 0, 0.19);
+         border-radius: 20px;
+       
+       }
+       .basic-women
+       {
+        background-image: url(images/basic-women.jpg);
+       }
+       .printed-shirt div,.basic-women div,.girl-bag div,.sweatshirts div
+       {
+        margin: 10px 0px 0px 20px;
+       }
+       .badger
+       {
+        height: 100px;
+        width: 100px;
+       position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 22px;
+        top: 10px;
+        right: 20px;
+       }
+       .section-5{
+        grid-row: 8;
+        grid-column: 1/4;
+        height: 200px;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        font-size: 34px;
+        font-weight: bold;
+       }
+       .category
+       {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        list-style: none;
+       }
+       .category li:first-child
+       {
+        color: orange;
+        text-decoration: underline;
+       
+       }
+       .category li 
+       {
+        margin: 10px 20px 0px 0px;
+       
+        
+       }
+       .section-6
+       {
+        grid-row: 9;
+        grid-column: 1/4;
+        height: 400px;
+        display: flex;
+        justify-content: space-evenly;
+       }
+       .section-7
+       {
+        grid-row: 10;
+        grid-column: 1/4;
+        height: 400px;
+        display: flex;
+        justify-content: space-evenly;
+        margin-top: 20px;
+       }
+       .section-6-box
+       {
+       
+        height: 100%;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        
+       }
+       .section-6-box div 
+       {
+         
+       }
+       .section-6-image,.section-6-image-2,.section-6-image-3,.section-6-image-4
+       {
+      
+       
+        width: 100%;
+        height: 70%;
+      
+        background-image: url(images/shoese-3.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: whitesmoke;
+       }
+       .section-7-image,.section-7-image-2,.section-7-image-3,.section-7-image-4
+       {
+      
+       
+        width: 100%;
+        height: 70%;
+      
+        background-image: url(images/sneakers-2.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: whitesmoke;
+       }
+       .section-6-image-2
+       {
+        background-image: url(images/cotton-dress.png);
+       }
+       .section-7-image-2
+       {
+        background-image: url(images/clothes-2.png);
+       }
+       .section-6-image-3
+       {
+        background-image: url(images/shoes-4.png);
+       }
+       .section-7-image-3
+       {
+        background-image: url(images/girl-shoes-2.png);
+       }
+       .section-6-image-4
+       {
+        background-image: url(images/bags.png);
+       }
+       .section-7-image-4
+       {
+        background-image: url(images/bags-2.png);
+       }
+       .section-6-info
+       {
+        width: 100%;
+        height: 30%;
+      
+        display: flex;
+        flex-direction: column;
+       justify-content: center;
+       }
+       .section-8
+        {
+            grid-row:11;
+            grid-column: 1/4;
+            height: 100px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+     
+        .discover
+        {
+          
+            width: 30%;
+            height: 30%;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+           font-weight: bold;
+           padding: 25px;
+           border-bottom: 1px solid black;
+           font-size: 18px;
+        }
+        .section-9
+        {
+            grid-row:12;
+            grid-column: 1/4;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 400px;
+           background-image: url(images/clothes-banner.jpg);
+           background-size: cover;
+           padding: 20px;
+           
+          
+        }
+        .section-9-info
+        {
+            font-size: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: last baseline;
+             
+           justify-content: space-evenly;
+            width: 100%;
+            height: 100%;
+            font-weight: bold;
+            margin-right: 20px;
+           
+        }
+        .section-9-info button{
+             
+            background-color: black;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .shedule
+        {
+            font-size: 14px;
+            word-spacing: 15px;
+        }
+        .times
+         {
+            color: red;
+         }
+         .section-10
+        {
+            grid-row:13;
+            grid-column: 1/4;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .section-10-info
+        {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 18px;
+
+        }
+        .latest
+        {
+            font-size: 24px;
+        }
+        .section-11-web
+        {
+            grid-row:15;
+            grid-column: 1/4;
+            height: 450px;
+            display: flex;
+        }
+        .carousel,.carousel-inner
+        {
+            height: 100%;
+            width: 100%;
+        }
+        .carousel-item
+        {
+            height: 100%;
+            width: 100%;
+        }
+        .carousel-box
+        {
+            width: 100%;
+            height: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          display: flex !important;
+          justify-content: space-evenly;
+        }
+        .carousel-box-div{
+    
+            height: 90%;
+            width: 30%;
+          
+          
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+         0 6px 20px rgba(0, 0, 0, 0.19);
+        
+          
+            
+         
+
+        }
+        .main-div{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+        .main-div-img,.main-div-img2,.main-div-img3,.main-div-img4,.main-div-img5,.main-div-img6
+        {
+           width: 30%;
+           height: 80%;
+         background-color: lightcyan;
+           background-image: url(images/shoese-3.png);
+           background-size: 90%;
+           background-repeat: no-repeat;
+           background-position: center;
+           border-radius: 10px;
+        }
+        .main-div-img2{
+            background-image: url(images/clothes-2.png);
+            background-size: 70%;
+        }
+        .main-div-img3{
+            background-image: url(images/sneakers-2.png);
+        
+        }
+        .main-div-img4{
+            background-image: url(images/bags-2.png);
+            background-size: 70%;
+        
+        }
+        .main-div-img5{
+            background-image: url(images/cotton-dress.png);
+            background-size: 50%;
+        
+        }
+        .main-div-img6{
+            background-image: url(images/girl-shoes-2.png);
+        
+        }
+        .main-div-info
+        {
+           width: 50%;
+           height: 80%;
+           display: flex;
+           flex-direction: column;
+          
+        }
+        .information
+        {
+            display: flex;
+             margin-top: 20px;
+            width: 90%;
+            height: 50%;
+        }
+        .person-name
+        {
+            display: flex;
+            justify-content: baseline;
+            align-items: baseline;
+            width: 90%;
+            height: 10%;
+            font-weight: bold;
+        }
+        footer
+        {
+            grid-row:16;
+            grid-column: 1/4;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+           
+        }
+        .footer-head
+        {
+          
+            width: 90%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+       
+        .footer-body
+        {
+            border-bottom: 1px solid white;
+            width: 90%;
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .footer-body-box
+        {
+            width: 25%;
+            height: 90%;   
+            display: flex;
+            flex-direction: column;
+           justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        .footer-end
+        {
+            width: 90%;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-end div{
+            width: 40%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+        .footer-brand
+        {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .footer-social
+        {
+            font-size: 20px;
+            word-spacing: 5px;
+            color: gray;
+        }
+        .footer-items
+        {
+            list-style: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: gray;
+        }
+        .footer-items li:first-child
+        {
+            color: white;
+        }
+        .section-11-mob
+        {
+            display: none;
+        }
+        .btn-justify,.main-box-mobile
+        {
+            display: none;
+        }
+       
+     }
+     @media screen and (orientation:portrait)
+     {
+        body
+        {
+            display: grid;
+            grid-template-columns: 2fr 8fr 2fr;
+        }
+        header
+        {
+            grid-row: 1;
+            grid-column: 1/4;
+            display: grid;
+            grid-template-columns: 9fr 3fr;
+           
+        }
+        aside
+        {
+            grid-row: 2;
+            grid-column: 1/4;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        .bi-lightning-fill
+        {
+            color: gold;
+        }
+        main
+        {
+            height: 450px;
+            grid-row:3;
+            grid-column:1/4;
+           
+            display: grid;
+            grid-template-columns: 12fr;
+        }
+        .main-box-mobile
+        {
+            grid-row: 1;
+            grid-column: 1/4; 
+            
+        }
+      
+        .nav-brand
+        {
+            grid-row: 1;
+            grid-column: 1;
+            font-size: 28px;
+            margin: 10px;
+            font-weight: bold;
+        
+        }
+        .btn-justify
+        {
+            grid-row: 1;
+            grid-column: 2;
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            border: none;
+             background: none;
+             font-size: 28px;
+        }
+        .navbars,.women-fashion,.men-fashion,.kid-fashion,.social
+        {
+            display: none;
+        }
+     
+        .cartbox
+        {
+            position: relative;
+        }
+        .badges
+        {
+            background-color: red;
+           
+            border-radius: 50%;
+            padding: 1px;
+            text-align: center;
+            font-size: 12px;
+            color: white;
+            position: absolute;
+            top: -11px;
+            right: -11px;
+        }
+        .women-fashion-mob,.men-fashion-mob,.kid-fashion-mob
+        {
+           
+           height: 450px;
+           width: 100%;
+        background-image: url(images/women-fashion-2.avif);
+        background-position: center;
+        background-size: cover;
+        display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+        }
+        .men-fashion-mob
+        {
+            background-image: url(images/men3.jpg);  
+        }
+        .kid-fashion-mob
+        {
+            background-image: url(images/kid3.jpg);  
+        }
+        .women-fashion-mob div,.men-fashion-mob div,.kid-fashion-mob div {
+           margin-top: 20px;
+           text-shadow: 1px 1px 2px gray;
+           
+        }
+        .section-1
+       {
+       
+        grid-row:4;
+       grid-column: 1/4;
+          height: 300px;
+          display: grid;
+          grid-template-rows: 3fr 3fr 3fr 3fr;  
+       }
+       .section-1 div 
+       {
+         
+     
+      display: flex;
+     
+     margin-left: 20px;
+     
+       }
+       .section-1-info
+       {
+        display: flex;
+        flex-direction: column;
+        
+        
+       }
+       .section-2{
+        grid-row: 5;
+        grid-column: 1/4;
+        height: 200px;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        padding: 50px;
+       }
+       .section-2-title{
+        font-size: 24px;
+       
+       }
+       .section-3{
+        grid-row:6;
+            grid-column: 1/4;
+            height: 800px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+          
+           
+           
+       }
+       .section-4{
+        grid-row:7;
+            grid-column: 1/4;
+            height: 800px;
+           display: flex;
+           flex-direction: column;
+           justify-content: space-evenly;
+           align-items: center;
+          
+           
+           
+       }
+       .girl-bag,.basic-women,.sweatshirts
+       {
+      
+        height: 45%;
+        width: 90%;
+        background-image: url(images/girl-bag.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19);
+      
+       }
+       .basic-women
+       {
+        background-image: url(images/basic-women.jpg);
+       }
+       .sweatshirts
+       {
+        background-image: url(images/sweatshirts.jpg);
+       }
+       .printed-shirt
+       {
+      
+      
+        height: 45%;
+        width: 90%;
+        background-image: url(images/printed-shirt.jpg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items: center;
+        color: black;
+        border-radius: 20px;
+         position: relative;
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+         0 6px 20px rgba(0, 0, 0, 0.19); 
+       
+       }
+       .girl-bag div,.printed-shirt div,.basic-women div,.sweatshirts div
+       {
+        margin-top: 20px;
+       }
+       .badger
+       {
+        height: 50px;
+        width: 50px;
+       position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 14px;
+        top: 10px;
+        right: 20px;
+       }
+       .section-5{
+        grid-row: 8;
+        grid-column: 1/4;
+        height: 200px;
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 10px;
+        font-size: 34px;
+        font-weight: bold;
+       }
+       .category
+       {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        list-style: none;
+       }
+       .category li:first-child
+       {
+        color: orange;
+        text-decoration: underline;
+       
+       }
+       .category li 
+       {
+        margin: 10px 20px 0px 0px;
+       
+        
+       }
+       .section-6
+       {
+        grid-row: 9;
+        grid-column: 1/4;
+        height: 600px;
+         display: grid;
+       grid-template-columns: 6fr 6fr;
+       
+     
+       }
+       .section-7
+       {
+        grid-row: 10;
+        grid-column: 1/4;
+        height: 600px;
+         display: grid;
+       grid-template-columns: 6fr 6fr;
+
+       }
+       .section-6-mob-box-1{
+        grid-row: 1;
+        grid-column: 1;
+       }
+       .section-6-mob-box-2{
+        grid-row: 1;
+        grid-column: 2;
+       }
+       .section-6-mob-box-3{
+        grid-row: 2;
+        grid-column: 1;
+       }
+       .section-6-mob-box-4{
+        grid-row: 2;
+        grid-column: 2;
+       }
+       .section-6-mob-box-1,.section-6-mob-box-2,.section-6-mob-box-3,.section-6-mob-box-4
+       {
+       
+        height: 90%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19); 
+        margin: 0px 0px 0px 10px;
+        border-radius: 20px;
+      
+        
+       }
+       .section-6-box div 
+       {
+       
+        
+       
+       }
+       .section-6-image,.section-6-image-2,.section-6-image-3,.section-6-image-4
+       {
+      
+       
+        width: 100%;
+        height: 70%;
+      
+        background-image: url(images/shoese-3.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+      
+       }
+       .section-7-image,.section-7-image-2,.section-7-image-3,.section-7-image-4
+       {
+      
+       
+        width: 100%;
+        height: 70%;
+      
+        background-image: url(images/sneakers-2.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+      
+       }
+       .section-6-image-2
+       {
+        background-image: url(images/cotton-dress.png);
+       }
+       .section-6-image-3
+       {
+        background-image: url(images/shoes-4.png);
+       }
+       .section-6-image-4
+       {
+        background-image: url(images/bags.png);
+       }
+       .section-7-image-2
+       {
+        background-image: url(images/clothes-2.png);
+       }
+       .section-7-image-3
+       {
+        background-image: url(images/girl-shoes-2.png);
+       }
+       .section-7-image-4
+       {
+        background-image: url(images/bags-2.png);
+       }
+       .section-6-info
+       {
+       
+        width: 100%;
+        height: 30%;
+      
+        display: flex;
+        flex-direction: column;
+       justify-content: baseline;
+       align-items: center;
+       font-size: 12px;
+       
+       }
+       .bw 
+       {
+        font-weight: bold;
+       }
+       .section-8
+        {
+            grid-row:11;
+            grid-column: 1/4;
+            height: 100px;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        .discover
+        {
+          
+            width: 60%;
+            height: 30%;
+            display: flex;
+           justify-content: center;
+           align-items: center;
+           font-weight: bold;
+           padding: 25px;
+           border-bottom: 1px solid black;
+           font-size: 18px;
+        }
+        .section-9
+        {
+            grid-row:12;
+            grid-column: 1/4;
+            height: 400px;
+          background-image: url(images/clothes-banner.jpg);
+          background-size: cover;
+           display: flex;
+           justify-content: center;
+        }
+        .section-9-info{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: last baseline;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .section-9-info span 
+        {
+            margin-top: 10px;
+        }
+        .section-9-info button{
+             
+             background-color: black;
+             color: white;
+             font-size: 18px;
+             padding: 10px;
+             border-radius: 10px;
+             margin-top: 10px;
+         }
+         .shedule
+         {
+             font-size: 16px;
+             word-spacing: 15px;
+         }
+         .times
+         {
+            color: white;
+            text-shadow: 1px 1px 1px gray;
+         }
+         .section-10
+        {
+            grid-row:13;
+            grid-column: 1/4;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .section-10-info
+        {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+
+        }
+        .latest
+        {
+            font-size: 20px;
+        }
+    .section-11-web
+    {
+        display: none;
+    }
+    .section-11-mob
+        {
+            grid-row:14;
+            grid-column: 1/4;
+            height: 400px;
+        }
+        .carousel,.carousel-inner,.carousel-item
+        {
+            height: 100%;
+            width: 100%;
+        }
+        .carousel-item
+        {
+        
+        }
+        .carousel-box
+        {
+            height: 100%;
+            width: 100%;
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .carousel-box-main
+        {
+            height: 90%;
+            width: 90%;
+           
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2),
+        0 6px 20px rgba(0, 0, 0, 0.19); 
+        margin: 0px 0px 0px 10px;
+        }
+        .main-div{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+        .main-div-img,.main-div-img2,.main-div-img3,.main-div-img4,.main-div-img5,.main-div-img6
+        {
+           width: 30%;
+           height: 80%;
+         background-color: lightcyan;
+           background-image: url(images/shoese-3.png);
+           background-size: 90%;
+           background-repeat: no-repeat;
+           background-position: center;
+           border-radius: 10px;
+        }
+        .main-div-img2{
+            background-image: url(images/clothes-2.png);
+            background-size: 70%;
+        }
+        .main-div-img3{
+            background-image: url(images/sneakers-2.png);
+        
+        }
+        .main-div-img4{
+            background-image: url(images/bags-2.png);
+            background-size: 70%;
+        
+        }
+        .main-div-img5{
+            background-image: url(images/cotton-dress.png);
+            background-size: 50%;
+        
+        }
+        .main-div-img6{
+            background-image: url(images/girl-shoes-2.png);
+        
+        }
+        .main-div-info
+        {
+           width: 50%;
+           height: 80%;
+           display: flex;
+           flex-direction: column;
+          
+        }
+        .information
+        {
+            display: flex;
+             margin-top: 20px;
+            width: 90%;
+            height: 50%;
+        }
+        .person-name
+        {
+            display: flex;
+            justify-content: baseline;
+            align-items: baseline;
+            width: 90%;
+            height: 10%;
+            font-weight: bold;
+        }
+        footer
+        {
+            grid-row:15;
+            grid-column: 1/4;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            color: white;
+           
+        }
+        .footer-head
+        {
+          
+            width: 100%;
+            height: 30%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+       
+        .footer-body
+        {
+           
+            width: 100%;
+            height: 60%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .footer-body-box
+        {
+            width: 25%;
+            height: 90%;   
+            display: flex;
+            flex-direction: column;
+           justify-content: space-evenly;
+            align-items: center;
+            
+        }
+        .footer-end
+        {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-end div{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+        .footer-brand
+        {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .footer-social
+        {
+            font-size: 12px;
+            word-spacing: 5px;
+            color: gray;
+        }
+        .footer-items
+        {
+            list-style: none;
+            font-size: 12px;
+            font-weight: bold;
+            color: gray;
+        }
+        .footer-items li:first-child
+        {
+            color: white;
+        }
+     }
+    </style>
+</head>
+<body>
+   <header>
+      <div class="nav-brand">
+          Shopper.
+      </div>
+      <nav class="navbars">
+        <span>Home</span>
+        <span>Catalog</span>
+        <span>Shop</span>
+        <span>Pages</span>
+        <span>Blog</span>
+        <span>Docs</span>
+      </nav>
+      <div class="social">
+          <span class="bi bi-search"></span>
+          <span class="bi bi-person"></span>
+          <span class="bi bi-heart"></span>
+          <span class="bi bi-cart3 cartbox"><span class="badges rounded rounded-circle px-1">2</span></span>
+      </div>
+      <button class="bi bi-list btn-justify" data-bs-toggle="offcanvas" data-bs-target="#menu"></button>
+   </header> 
+   
+  <div class="offcanvas offcanvas-start w-75 " id="menu">
+     <div class="offcanvas-header">
+        <span class="fw-bold fs-1">Menu</span>
+        <button class="btn btn-close" data-bs-dismiss="offcanvas"></button>
+     </div>
+     <div class="offcanvas-body">
+          <ul class="list-unstyled fw-bold fs-5">
+              <li class="my-2 ms-3">Home</li>
+              <li class="my-2  ms-3">Catalog</li>
+              <li class="my-2  ms-3">Shop</li>
+              <li class="my-2  ms-3">Pages</li>
+              <li class="my-2  ms-3">Blog</li>
+              <li class="my-2  ms-3">Docs</li>
+          </ul>
+
+          <ul class="list-unstyled fw-bold fs-5 d-flex">
+            <li class="my-2 ms-3 bi bi-search"></li>
+            <li class="my-2  ms-3 bi bi-person"></li>
+            <li class="my-2  ms-3 bi bi-heart"></li>
+            <span class="my-2  ms-3 bi bi-cart3 cartbox"><span class="badges rounded rounded-circle px-1">2</span></span>
+
+        </ul>
+
+
+     </div>
+
+  </div>
+
+   <aside>
+     <span>
+        <span class="bi bi-lightning-fill"></span>
+        happy holidays deals on everything
+        <span class="bi bi-lightning-fill"></span>
+    </span>
+   </aside> 
+
+   <main>
+       <div class="women-fashion">
+        <div><span class="text-white fs-2 fw-bold">WOMEN</span></div>
+        <div><button class="btn btn-light fw-bold">Shop Women <span class="bi bi-chevron-right "></span></button></div>
+       </div>
+       <div class="men-fashion">
+        <div><span class="text-white fs-2 fw-bold ">MEN</span></div>
+        <div><button class="btn btn-light fw-bold">Shop Men <span class="bi bi-chevron-right"></span></button></div>
+
+
+       </div>
+       <div class="kid-fashion">
+
+        <div><span class="text-white fs-2 fw-bold">Kids</span></div>
+        <div><button class="btn btn-light fw-bold">Shop Kids <span class="bi bi-chevron-right"></span></button></div>
+
+       </div>
+       <div class="main-box-mobile">
+
+          <div class="carousel carousel-fade " data-bs-ride="carousel" id="slider" data-bs-pause="false">
+            <div class="carousel-inner slide">
+
+                <div class="carousel-item active" data-bs-interval="3000">
+                    <div class=" women-fashion-mob">
+                        <div><span class="text-white fs-2 fw-bold">WOMEN</span></div>
+                        <div><button class="btn btn-light fw-bold">Shop Women <span class="bi bi-chevron-right "></span></button></div>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class="men-fashion-mob">
+                        <div><span class="text-white fs-2 fw-bold">MEN</span></div>
+                        <div><button class="btn btn-light fw-bold">Shop Men <span class="bi bi-chevron-right "></span></button></div>
+
+                    </div>
+
+                </div>
+
+                <div class="carousel-item" data-bs-interval="3000">
+                    <div class=" kid-fashion-mob">
+                        <div><span class="text-white fs-2 fw-bold">KIDS</span></div>
+                        <div><button class="btn btn-light fw-bold">Shop Kids <span class="bi bi-chevron-right "></span></button></div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+          </div>
+
+       </div>
+
+   </main>
+   
+  <div class="section-1">
+      <div class="section-1-box">
+        <div class="section-1-icon"><span class="bi bi-truck text-danger fs-4"></span></div>
+        <div class="section-1-info">
+            <div class="fw-bold">FREE SHIPPING</div>
+            <div>From all orders over $100</div>
+        </div>
+      </div>
+      <div class="section-1-box">
+        <div class="section-1-icon"><span class="bi bi-arrow-left-right text-danger fs-4"></span></div>
+        <div class="section-1-info">
+            <span class="fw-bold">FREE RETURNS</span>
+            <span>Return money within 30 days</span>
+        </div>
+      </div>
+      <div class="section-1-box">
+        <div class="section-1-icon"><span class="bi bi-lock text-danger fs-4"></span></div>
+        <div class="section-1-info">
+            <span class="fw-bold">Secure shopping</span>
+            <span>You're in safe hands</span>
+        </div>
+      </div>
+      <div class="section-1-box">
+        <div class="section-1-icon"><span class="bi bi-pin text-danger fs-4"></span></div>
+        <div class="section-1-info">
+            <span class="fw-bold">Over 10,000 Styles</span>
+            <span>We have everything you need</span>
+        </div>
+      </div>
+  </div>
+
+  <div class="section-2">
+       <span class="fw-bold">New Collection</span>
+       <span class="fw-bold section-2-title">Best Picks 2024</span>
+       <span class="fw-bold">Appear, dry there darkness they're seas, dry waters thing fly midst. Beast, above fly brought Very green.</span>
+  </div>
+ 
+  <div class="section-3">
+
+    <div class="girl-bag">
+        <div><span class="text-white fs-2 fw-bold">Bags Collection</span></div>
+        <div><button class="btn btn-light fw-bold">Shop Now <span class="bi bi-chevron-right "></span></button></div>
+    </div>
+    <div class="printed-shirt">
+        <div><span class="text-white fs-2 fw-bold">Printed Mens Shirt</span></div>
+        <div><button class="btn btn-light fw-bold">Shop Now <span class="bi bi-chevron-right "></span></button></div>
+        <div class="badge rounded rounded-circle bg-danger badger"><span>save </span><span>30%</span></div>
+    </div>
+
+  </div>
+
+
+  <div class="section-4">
+
+   
+    <div class="basic-women">
+        <div><span class="text-white fs-2 fw-bold">Basic Women's Dresses</span></div>
+        <div><button class="btn btn-light fw-bold">Shop Now <span class="bi bi-chevron-right "></span></button></div>
+       
+    </div>
+
+    <div class="sweatshirts">
+        <div><span class="text-white fs-2 fw-bold">Sweatshirts</span></div>
+        <div><button class="btn btn-light fw-bold">Shop Now <span class="bi bi-chevron-right "></span></button></div>
+    </div>
+
+  </div>
+
+     <div class="section-5">
+        <div><span>Top Month Seller</span></div>
+        <div>
+            <ul  class="category">
+                <li>Women</li>
+                <li>Men</li>
+                <li>Kids</li>
+            </ul>
+        </div>
+     </div>
+
+     <div class="section-6  ">
+         <div class="section-6-box section-6-mob-box-1">
+            <div class="section-6-image"></div>
+            <div class="section-6-info">
+                <span>shoes</span>
+                <span class="fw-bold bw">Nike Sneakers</span>
+                <span>&dollar;129.00</span>
+            </div>
+         </div>
+         <div class="section-6-box section-6-mob-box-2">
+            <div class="section-6-image-2"></div>
+            <div class="section-6-info">
+                <span>Dresses</span>
+                <span class="fw-bold bw">Cotton Floral Print Dress</span>
+                <span>&dollar;40.00</span>
+            </div>
+         </div>
+         <div class="section-6-box section-6-mob-box-3">
+            <div class="section-6-image-3"></div>
+            <div class="section-6-info">
+                <span>Sandels</span>
+                <span class="fw-bold bw"> mid-heel Sandals</span>
+                <span>&dollar;85.00</span>
+            </div>
+         </div>
+         <div class="section-6-box section-6-mob-box-4">
+            <div class="section-6-image-4"></div>
+            <div class="section-6-info">
+                <span>Bags</span>
+                <span class="fw-bold bw">Leather mid-heel Sandals</span>
+                <span>&dollar;29.00</span>
+            </div>
+         </div>
+     </div>
+
+
+     <div class="section-7  ">
+        <div class="section-6-box section-6-mob-box-1">
+           <div class="section-7-image"></div>
+           <div class="section-6-info">
+               <span>shoes</span>
+               <span class="fw-bold bw">Campus Sneakers</span>
+               <span>&dollar;169.00</span>
+           </div>
+        </div>
+        <div class="section-6-box section-6-mob-box-2">
+           <div class="section-7-image-2"></div>
+           <div class="section-6-info">
+               <span>Tops</span>
+               <span class="fw-bold bw">Soft Floral  Dress</span>
+               <span>&dollar;60.00</span>
+           </div>
+        </div>
+        <div class="section-6-box section-6-mob-box-3">
+           <div class="section-7-image-3"></div>
+           <div class="section-6-info">
+               <span>Sneakers</span>
+               <span class="fw-bold bw"> Stylish Sneakers</span>
+               <span>&dollar;145.00</span>
+           </div>
+        </div>
+        <div class="section-6-box section-6-mob-box-4">
+           <div class="section-7-image-4"></div>
+           <div class="section-6-info">
+               <span>Comfortable Bags</span>
+               <span class="fw-bold bw">Pinked mid-heel Sandals</span>
+               <span>&dollar;89.00</span>
+           </div>
+        </div>
+    </div>
+
+    <div class="section-8">
+
+        <div class="discover">
+            <span>Discover More</span>
+        </div>
+
+    </div>
+
+    <div class="section-9">
+          <div class="section-9-info">
+            <span>Get 50% from </span>
+            <span>Summer Collection</span>
+           
+                <span class="times">485 : 13 : 13 : 33</span>
+                <span class="shedule">Days Hours Minutes Seconds</span>
+           
+
+            <button>Shop Now <span class="bi bi-chevron-right"></span></button>
+
+          </div>
+    </div>
+
+    <div class="section-10">
+      
+        <div class="section-10-info">
+            <span>what buyers say</span>
+            <span class="latest">Latest buyers Reviews</span>
+
+        </div>
+
+    </div>
+
+      <div class="section-11-web">
+       <div class="carousel slide" data-bs-ride="carousel" data-bs-pause="false">
+        <div class="carousel-inner">
+
+
+           <div class="carousel-item active" id="carousel-box">
+              <div class="carousel-box">
+                <div class="carousel-box-div">
+                    <div class="main-div">
+                        <div class="main-div-img"></div>
+                        <div class="main-div-info">
+                            <span>Shoes</span>
+                            <span class="fw-bold">Low Top Sneakers</span>
+                            <span >
+                                <span class="bi bi-star-fill text-warning"></span>
+                                <span class="bi bi-star-fill text-warning"></span>
+                                <span class="bi bi-star-fill text-warning"></span>
+                                <span class="bi bi-star-fill text-warning"></span>
+                                <span class="bi bi-star"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <span> Designed for those who love to stand out, each pair combines comfort with eye-catching style. Whether you're dressing up or keeping it casual, these shoes add a pop of color to any outfit.</span>
+                    </div>
+                    <div class="person-name">
+                        <span>Logan Edwards, 1 jan 2024</span>
+                    </div>
+
+                </div>
+                <div class="carousel-box-div">
+                    <div class="main-div">
+                        <div class="main-div-img2"></div>
+                        <div class="main-div-info">
+                            <span>Top Dress</span>
+                            <span class="fw-bold">Fashionable girl dress</span>
+                            <span >
+                                <span class="bi bi-star-fill text-warning"></span>
+                                <span class="bi bi-star-fill text-warning"></span>
+                                <span class="bi bi-star"></span>
+                                <span class="bi bi-star"></span>
+                                <span class="bi bi-star"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <span>Top girl dresses, where elegance meets playful charm. Each dress is crafted with attention to detail, offering a perfect blend of style and comfort for every occasion.</span>
+                    </div>
+                    <div class="person-name">
+                        <span>Tony Stark, 26 March 2024</span>
+                    </div>
+
+                </div>
+                <div class="carousel-box-div">
+                    <div class="main-div">
+                        <div class="main-div-img3"></div>
+                        <div class="main-div-info">
+                            <span>Sneakers</span>
+                            <span class="fw-bold">Campus Sneakers</span>
+                            <span >
+                                <span class="bi bi-star-fill text-warning"></span>
+                                <span class="bi bi-star-fill text-warning"></span>
+                                <span class="bi bi-star-fill text-warning"></span>
+                                <span class="bi bi-star"></span>
+                                <span class="bi bi-star"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="information">
+                        <span> Step into style with our Campus Sneakers, designed for both comfort and versatility. Whether you're hitting the books or the streets.</span>
+                    </div>
+                    <div class="person-name">
+                        <span>Henry Cavil, 16 Aug 2024</span>
+                    </div>
+                </div>
+            </div>
+           </div>
+
+
+           <div class="carousel-item " >
+            <div class="carousel-box">
+            <div class="carousel-box-div">
+                <div class="main-div">
+                    <div class="main-div-img4"></div>
+                    <div class="main-div-info">
+                        <span>Bags</span>
+                        <span class="fw-bold">Luxury Bags</span>
+                        <span >
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="information">
+                    <span> Explore our collection of bags, where functionality meets fashion. Whether you're heading to work, class, or a weekend getaway.</span>
+                </div>
+                <div class="person-name">
+                    <span>Dr Strange, 29 April 2024</span>
+                </div>
+
+            </div>
+            <div class="carousel-box-div">
+                <div class="main-div">
+                    <div class="main-div-img5"></div>
+                    <div class="main-div-info">
+                        <span>Night Dress</span>
+                        <span class="fw-bold">Comfortable Night dress</span>
+                        <span >
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star"></span>
+                            <span class="bi bi-star"></span>
+                            <span class="bi bi-star"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="information">
+                    <span>Slip into elegance with our night dresses, designed for ultimate comfort and timeless style. Each piece is crafted from soft, luxurious fabrics.</span>
+                </div>
+                <div class="person-name">
+                    <span>Chris Hamesworth, 11 Feb 2024</span>
+                </div>
+
+            </div>
+            <div class="carousel-box-div">
+                <div class="main-div">
+                    <div class="main-div-img6"></div>
+                    <div class="main-div-info">
+                        <span>Girls Sneakers</span>
+                        <span class="fw-bold">Stylish Sneakers</span>
+                        <span >
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star-fill text-warning"></span>
+                            <span class="bi bi-star"></span>
+                            <span class="bi bi-star"></span>
+                        </span>
+                    </div>
+                </div>
+                <div class="information">
+                    <span> Our girl shoes blend playful designs with lasting comfort, perfect for little feet on the move. From cute ballet flats to sporty sneakers.</span>
+                </div>
+                <div class="person-name">
+                    <span>Super Girl, 31 July 2024</span>
+                </div>
+            </div>
+       </div>
+    </div>
+
+        </div>
+       </div>
+      </div>
+
+      <div class="section-11-mob">
+         <div class="carousel" data-bs-pause="false" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-box">
+                         <div class="carousel-box-main">
+                            <div class="main-div">
+                                <div class="main-div-img"></div>
+                                <div class="main-div-info">
+                                    <span>Shoes</span>
+                                    <span class="fw-bold">Low Top Sneakers</span>
+                                    <span >
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="information">
+                                <span> Designed for those who love to stand out, each pair combines comfort with eye-catching style. Whether you're dressing up or keeping it casual, these shoes add a pop of color to any outfit.</span>
+                            </div>
+                            <div class="person-name">
+                                <span>Logan Edwards, 1 jan 2024</span>
+                            </div>
+                         </div>
+                    </div>
+
+                </div>
+     
+                <div class="carousel-item ">
+                    <div class="carousel-box">
+                         <div class="carousel-box-main">
+                            <div class="main-div">
+                                <div class="main-div-img2"></div>
+                                <div class="main-div-info">
+                                    <span>Top Dress</span>
+                                    <span class="fw-bold">Fashionable girl dress</span>
+                                    <span >
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star"></span>
+                                        <span class="bi bi-star"></span>
+                                        <span class="bi bi-star"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="information">
+                                <span> Top girl dresses, where elegance meets playful charm. Each dress is crafted with attention to detail, offering a perfect blend of style and comfort for every occasion.</span>
+                            </div>
+                            <div class="person-name">
+                                <span>Tony Stark, 26 March 2024</span>
+                            </div>
+        
+                         </div>
+                    </div>
+
+                </div>
+
+                <div class="carousel-item ">
+                    <div class="carousel-box">
+                         <div class="carousel-box-main">
+                            <div class="main-div">
+                                <div class="main-div-img3"></div>
+                                <div class="main-div-info">
+                                    <span>Sneakers</span>
+                                    <span class="fw-bold">Campus Sneakers</span>
+                                    <span >
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star-fill text-warning"></span>
+                                        <span class="bi bi-star"></span>
+                                        <span class="bi bi-star"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="information">
+                                <span>Step into style with our Campus Sneakers, designed for both comfort and versatility. Whether you're hitting the books or the streets.</span>
+                            </div>
+                            <div class="person-name">
+                                <span>Henry Cavil, 16 Aug 2024</span>
+                            </div>
+        
+                         </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+            </div>
+         </div>
+
+      </div>
+     
+   <footer>
+    <div class="footer-head">
+        <div><span>Want style Ideas and Treats?</span></div>
+        <div class="input-group w-50 "><input type="text" class="form-control" placeholder="Enter Email"> <button class="btn btn-warning fw-bold text-black">Subscribe</button></div>
+    </div>
+    <div class="footer-body">
+        <div class="footer-body-box">
+             <div><span class="footer-brand">Shopper.</span></div>
+             <div class="footer-social">
+                <span class="bi bi-twitter-x "></span>
+                <span class="bi bi-facebook "></span>
+                <span class="bi bi-youtube "></span>
+                <span class="bi bi-instagram "></span>
+             </div>
+        </div>
+        <div class="footer-body-box">
+            <ul class="footer-items">
+                <li>Support</li>
+                <li>Contact Us</li>
+                <li>Faqs</li>
+                <li>Size Guide</li>
+                <li>Shipping & Returns</li>
+            </ul>
+        </div>
+        <div class="footer-body-box">
+            <ul class="footer-items">
+                <li>Shop</li>
+                <li>Men's Shopping</li>
+                <li>Women's Shopping</li>
+                <li>Kids Shopping</li>
+                <li>Discounts</li>
+            </ul>
+        </div>
+        <div class="footer-body-box">
+            <ul class="footer-items">
+                <li>Company</li>
+                <li>Our Story</li>
+                <li>carrier</li>
+                <li>Terms & Conditions</li>
+                <li>Privacy & Cookie Policy</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-end">
+        <div><span>© 2019 All rights reserved. Designed by Mursalin.</span></div>
+       
+    </div>
+   </footer>
+</body>
+</html>
